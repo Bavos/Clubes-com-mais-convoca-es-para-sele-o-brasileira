@@ -1,17 +1,14 @@
 {
   "name": "ranking-convocacoes-selecao",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "remotion studio",
-    "build": "npx remotion bundle src/index.ts --out-dir build",
-    "render": "npx remotion render src/index.ts RankingVideo out/video.mp4",
-    "preview": "npx remotion preview src/index.ts"
+    "build": "remotion bundle src/index.ts --out-dir build",
+    "render": "remotion render src/index.ts RankingVideo out/video.mp4"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.340",
-    "@remotion/google-fonts": "^4.0.340",
-    "@remotion/player": "^4.0.340",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remotion": "^4.0.340"
@@ -20,8 +17,5 @@
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "typescript": "^5.5.4"
-  },
-  "engines": {
-    "node": ">=18"
   }
 }
