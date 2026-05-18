@@ -1,11 +1,10 @@
 export const palette = {
-  green: '#1E7F43',
-  yellow: '#F7C948',
-  navy: '#091C2B',
+  green: '#009C3B',
+  yellow: '#FFDF00',
+  blue: '#002776',
   white: '#FFFFFF',
-  black: '#000000',
-  red: '#D7263D',
-  gold: '#F0C75E',
+  black: '#050505',
+  darkGray: '#111111',
 };
 
-export const fontStack = "'Inter', 'Montserrat', 'Arial Black', sans-serif";
+export const fontFamily = 'Inter, Montserrat, Arial Black, Arial, sans-serif';

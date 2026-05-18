@@ -1,12 +1,14 @@
-export const rankingData = [
-  {name: 'Botafogo', value: 47},
-  {name: 'São Paulo', value: 46},
-  {name: 'Flamengo', value: 35},
-  {name: 'Vasco', value: 35},
-  {name: 'Fluminense', value: 32},
-  {name: 'Palmeiras', value: 24},
-  {name: 'Santos', value: 24},
-  {name: 'Corinthians', value: 23},
-  {name: 'Real Madrid', value: 13},
-  {name: 'Atlético-MG', value: 12},
+export type RankingItem = {position: number; club: string; value: number};
+
+export const ranking: RankingItem[] = [
+  {position: 1, club: 'Botafogo', value: 47},
+  {position: 2, club: 'São Paulo', value: 46},
+  {position: 3, club: 'Flamengo', value: 35},
+  {position: 4, club: 'Vasco', value: 35},
+  {position: 5, club: 'Fluminense', value: 32},
+  {position: 6, club: 'Palmeiras', value: 24},
+  {position: 7, club: 'Santos', value: 24},
+  {position: 8, club: 'Corinthians', value: 23},
+  {position: 9, club: 'Real Madrid', value: 13},
+  {position: 10, club: 'Atlético-MG', value: 12},
 ];

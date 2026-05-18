@@ -1,7 +1,5 @@
-// remotion.config.ts
+import {Config} from 'remotion';
 
-import {Config} from "@remotion/cli/config";
-
-Config.setVideoImageFormat("jpeg");
+Config.setVideoImageFormat('jpeg');
 Config.setOverwriteOutput(true);
-Config.setChromiumOpenGlRenderer("angle");
+Config.setCodec('h264');
