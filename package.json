@@ -2,20 +2,32 @@
   "name": "ranking-convocacoes-selecao",
   "version": "1.0.0",
   "private": true,
-  "description": "Vídeo Remotion vertical sobre clubes com mais convocados para a seleção brasileira em Copas.",
+  "description": "Vídeo Remotion - Clubes com mais convocados para a Seleção Brasileira",
+  "license": "MIT",
+
   "scripts": {
-    "build": "remotion bundle src/index.ts --out-dir build",
-    "render": "remotion render src/index.ts RankingVideo out/video.mp4 --codec=h264 --pixel-format=yuv420p",
-    "preview": "remotion studio src/index.ts"
+    "dev": "remotion studio",
+    "build": "npx remotion bundle src/index.ts --out-dir build",
+    "render": "npx remotion render src/index.ts Main out/video.mp4",
+    "preview": "npx remotion preview src/index.ts"
   },
+
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "remotion": "4.0.290"
+    "@remotion/cli": "^4.0.340",
+    "@remotion/google-fonts": "^4.0.340",
+    "@remotion/player": "^4.0.340",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.340"
   },
+
   "devDependencies": {
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
-    "typescript": "5.6.3"
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "typescript": "^5.5.4"
+  },
+
+  "engines": {
+    "node": ">=18"
   }
 }
