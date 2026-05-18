@@ -3,32 +3,41 @@ name: Render Remotion Video
 on:
   workflow_dispatch:
   push:
-    branches: ["main", "master"]
+    branches:
+      - main
 
 jobs:
   render:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Generate package-lock if missing
+        run: |
+          if [ ! -f package-lock.json ]; then
+            npm install --package-lock-only
+          fi
+
+      - name: Build project
         run: npm run build
 
-      - name: Render
+      - name: Render video
         run: npm run render
 
-      - name: Upload MP4 artifact
+      - name: Upload rendered video
         uses: actions/upload-artifact@v4
         with:
-          name: ranking-video-mp4
+          name: remotion-video
           path: out/video.mp4
+          if-no-files-found: error
+          retention-days: 7

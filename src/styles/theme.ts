@@ -1,11 +1,9 @@
 export const palette = {
-  brasilGreen: '#009C3B',
-  brasilYellow: '#FFDF00',
-  brasilBlue: '#002776',
+  green: '#1E7F43',
+  yellow: '#F7C948',
+  navy: '#091C2B',
   white: '#FFFFFF',
   black: '#000000',
-  botafogoGray: '#1B1D21',
-  darkElegant: '#11151C',
   red: '#D7263D',
   gold: '#F0C75E',
 };
